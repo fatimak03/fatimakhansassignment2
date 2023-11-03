@@ -1,0 +1,160 @@
+/* Style for the Home section heading */
+#home h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Style for the About section heading */
+#about h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Projects section heading */
+#projects h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Style for the Contact section heading */
+#contact h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+/* Style for individual project titles */
+.project-title {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/* General styles */
+body {
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #759680; /* Set the default body background to white or any other color */
+    color: #759680;
+}
+
+/* Navigation styles */
+nav{
+        background-color: #759680;
+}
+nav ul {
+    /* background-color: #759680; */
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(4, 161, 57);
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    /* background-color: #618745; */
+    color: white;
+}
+
+/* Section styles */
+#home, #about, #projects, #contact {
+    padding: 50px;
+    text-align: center;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Style for the Contact section */
+#contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background-color: #9dc183; /* Sage green background for the contact section */
+}
+
+/* Style for the contact form */
+.contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white; /* Set the form background to white or any other color */
+    border-radius: 8px;
+}
+
+#contact .contact-form input[type="text"],
+#contact .contact-form input[type="email"],
+#contact .contact-form input[type="tel"],
+#contact .contact-form textarea {
+    display: block;
+    width: 80%;
+    padding: 10px;
+    margin: 10px auto;
+    border: 2px solid #ccc; /* Adjusted to a neutral color for better visibility */
+    border-radius: 4px;
+}
+
+#contact .contact-form button[type="submit"],
+#contact .contact-form button[type="reset"] {
+    background-color: #4CAF50;
+    color: white; /* Changed to white for better visibility */
+    padding: 14px 20px;
+    margin: 10px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 10px;
+        width: 100%;
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Styles for tablets and small screens */
+}
+
+@media only screen and (min-width: 1025px) {
+    /* Styles for large screens */
+}
+
+/* Additional styles can be added below */
+
+
+
+
+
+
+
+
