@@ -31,19 +31,18 @@
 
 /* General styles */
 body {
-    font-family: 'roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #759680; /* Set the default body background to white or any other color */
-    color: #759680;
+    background-color: #759680; /* Sage green background */
+    color: #333;
 }
 
 /* Navigation styles */
-nav{
-        background-color: #759680;
+nav {
+    background-color: #759680;
 }
 nav ul {
-    /* background-color: #759680; */
     list-style: none;
     text-align: left;
     margin: 0;
@@ -53,27 +52,24 @@ nav ul {
     width: 100%;
     z-index: 1000;
 }
-
 nav ul li {
     display: inline;
     margin-right: 20px;
 }
-
 nav ul li a {
     text-decoration: none;
     color: rgb(4, 161, 57);
     padding: 10px 20px;
 }
-
 nav ul li a:hover {
-    /* background-color: #618745; */
     color: white;
 }
 
 /* Section styles */
-#home, #about, #projects, #contact {
+#home, #about, #projects, #contact, #workout {
     padding: 50px;
     text-align: center;
+    background-color: #759680; /* Sage green background for all sections */
 }
 
 /* Smooth Scrolling */
@@ -89,51 +85,109 @@ html {
     min-height: 100vh;
     padding: 20px;
     text-align: center;
-    background-color: #9dc183; /* Sage green background for the contact section */
 }
 
-/* Style for the contact form */
-.contact-form {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white; /* Set the form background to white or any other color */
-    border-radius: 8px;
+/* Contact Form Grid Layout */
+.contact-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-#contact .contact-form input[type="text"],
-#contact .contact-form input[type="email"],
-#contact .contact-form input[type="tel"],
-#contact .contact-form textarea {
-    display: block;
-    width: 80%;
+.contact-form-grid div {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-grid label {
+    margin-bottom: 5px;
+}
+
+.contact-form-grid input[type="text"],
+.contact-form-grid input[type="email"],
+.contact-form-grid input[type="tel"],
+.contact-form-grid textarea {
     padding: 10px;
-    margin: 10px auto;
-    border: 2px solid #ccc; /* Adjusted to a neutral color for better visibility */
+    border: 2px solid #ccc;
     border-radius: 4px;
 }
 
-#contact .contact-form button[type="submit"],
-#contact .contact-form button[type="reset"] {
+.contact-form-grid .full-width {
+    grid-column: span 2;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Style for the workout form */
+.workout-form {
+    margin: 20px auto;
+    text-align: center;
+}
+.workout-form input[type="text"],
+.workout-form input[type="number"],
+.workout-form input[type="date"] {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+    border: 2px solid #ccc;
+    width: 80%;
+}
+.workout-form button {
     background-color: #4CAF50;
-    color: white; /* Changed to white for better visibility */
-    padding: 14px 20px;
-    margin: 10px auto;
+    color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    display: block;
+    margin: 10px 0;
 }
 
-/* Media Queries */
+/* Style for the workout list */
+.workout-list {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.workout-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.workout-list th, 
+.workout-list td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+.workout-list th {
+    background-color: #f4f4f4;
+}
+.workout-list button {
+    background-color: #f44336;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments */
 @media only screen and (max-width: 600px) {
+    .workout-form input[type="text"],
+    .workout-form input[type="number"],
+    .workout-form input[type="date"] {
+        width: 100%;
+    }
     nav ul li {
         display: block;
         margin-right: 0;
         text-align: center;
     }
-
     nav ul li a {
         padding: 10px;
         width: 100%;
@@ -150,6 +204,10 @@ html {
 }
 
 /* Additional styles can be added below */
+
+
+
+
 
 
 

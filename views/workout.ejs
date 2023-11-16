@@ -1,0 +1,33 @@
+<%- include('partials/head.ejs') %>
+<%- include('partials/nav.ejs') %>
+
+<section id="workout">
+    <h2>Workout Tracker</h2>
+    <div class="workout-form">
+        <input type="text" id="workout-name" placeholder="Workout Name">
+        <input type="number" id="workout-duration" placeholder="Duration (Minutes)">
+        <input type="date" id="workout-date">
+        <button onclick="addWorkout()">Add Workout</button>
+        <input type="hidden" id="edit-index">
+        <button onclick="updateWorkout()">Update Workout</button>
+    </div>
+    <div class="workout-list">
+        <table id="workout-table">
+            <thead>
+                <tr>
+                    <th>Workout Name</th>
+                    <th>Duration (Minutes)</th>
+                    <th>Date</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Workout entries will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<script src="/workoutActions.js"></script>
+
+

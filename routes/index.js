@@ -29,6 +29,13 @@ router.get('/projects', function(req, res, next) {
   });
 });
 
+/* GET workout page. */
+router.get('/workout', function(req, res, next) {
+  res.render('workout', {
+    title: 'Workout Tracker'
+  });
+});
+
 /* GET contact page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', {
